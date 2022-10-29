@@ -1,0 +1,45 @@
+﻿<Window x:Class="conjeturadecolltz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wf="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" d:DataContext="{d:DesignInstance local:MainWindow}"
+        xmlns:local="clr-namespace:conjeturadecolltz"
+        mc:Ignorable="d"
+      
+        Title="bot conjetura de  collatz" Height="480" Width="805">
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="64*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="77*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="66*"/>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="67*"/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="0" Grid.Column="0" Foreground="Cyan" FontSize="45" Background="Black" BorderBrush="Black" Grid.ColumnSpan="2">=</Button>
+        <Label Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="5" FontSize="45" Foreground="Cyan" Margin="49,-10,0,10">conjetura de collatz</Label>
+        <Button Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="2" Background="Black" Foreground="Cyan" BorderBrush="Cyan" FontSize="25" Margin="10,10,10,10" Click="Button_Click" BorderThickness="5">inicio</Button>
+        <lvc:CartesianChart   Name="C" Series="{Binding SeriesCollection}" Grid.Column="2" Grid.ColumnSpan="5" Margin="5,67,130,72" Grid.RowSpan="6" RenderTransformOrigin="0.5,0.5" >
+            <lvc:CartesianChart.AxisX>
+                <lvc:Axis Title="x" Labels="{Binding BarLabels}" MaxValue="9" MinValue="2"></lvc:Axis>
+            </lvc:CartesianChart.AxisX>
+            <lvc:CartesianChart.AxisY>
+                <lvc:Axis Title="y" Labels="{Binding Formatter}"></lvc:Axis>
+            </lvc:CartesianChart.AxisY>
+        </lvc:CartesianChart>
+
+
+    </Grid>
+</Window>
