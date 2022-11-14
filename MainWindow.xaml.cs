@@ -45,8 +45,9 @@ namespace conjeturadecolltz
              new LineSeries
                 {
                     Title = "collatz numbers",
-                    Values = new ChartValues<double> { 10, 31, 94, 283 ,850,2551,7654,22963,22963,68890,206671,620014,1860043, 5580130 , 16740391 , 50221174, 150663523 }
-
+                    Values = new ChartValues<double> {120,346,173,520,260,130,65,196,98,49,148,74,37,112,56,28,14,7,22,11,34,17,52,26,13,40,20,10,5,16,8,4,2,1},
+                    PointForeground=Brushes.Cyan,
+                   
                 },
             new LineSeries
             {
@@ -79,47 +80,44 @@ namespace conjeturadecolltz
 
         public void Button_Click(object sender, RoutedEventArgs e)
         {
-            int[] numeros = { 20, 43, 5 };
-
+            double[] numeros = { 120, 143, 115 };
+            double iterador = 2;
 
             for (int i = 0; i < numeros.Length; i++)
             {
+                double wi = numeros[1];
 
-                int iterador = 2;
-
-                int xd = numeros[i] % 2;
-               
-
-                while (xd != 1 && xd < 1000000000)
+                while ( wi != 1 && wi != 2 && wi!=4)
                 {
-                    if (xd == 0)
+               
+                    if (wi % 2 == 0)
                     {
-                        
-                        xd = numeros[i] / iterador;
+                        wi= wi / iterador;
                         StreamWriter sw = new StreamWriter("C:\\Users\\Usuario\\Downloads\\archivoos.txt");
-                        sw.Write(xd++);
+                        sw.Write(wi);
                         sw.Close();
+                        string sd = Convert.ToString(wi);
+                        MessageBox.Show(sd);
 
                     }
 
-                    else
+                   if(wi % 2 == 1)
                     {
-                        xd = xd * 3 + 1;
+                        wi=( wi * 3 )+ 1;  
                         StreamWriter sw = new StreamWriter("C:\\Users\\Usuario\\Downloads\\archivoss.txt");
-                        sw.Write(xd++);
+                        sw.Write(wi);
                         sw.Close();
-
+                        string sd = Convert.ToString(wi);
+                        MessageBox.Show(sd);
                     }
-
-                    string sd = Convert.ToString(xd);
-                    MessageBox.Show(sd);
-
-
-
-
-
+                   if( wi == 1 ||wi == 4 ||wi == 2)
+                    {
+                        MessageBox.Show("bucle collatz");
+                        Close();
+                    } 
                 }
-
+                break;
+              
 
             }
 
