@@ -9,37 +9,37 @@
         mc:Ignorable="d"
       
         Title="bot conjetura de  collatz" Height="580" Width="905">
-	<Grid Background="Black">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="77*"/>
-			<RowDefinition Height="77*"/>
-			<RowDefinition Height="64"/>
-			<RowDefinition Height="13"/>
-			<RowDefinition Height="77"/>
-			<RowDefinition Height="77"/>
-			<RowDefinition Height="77"/>
-		</Grid.RowDefinitions>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition/>
-			<ColumnDefinition Width="66*"/>
-			<ColumnDefinition Width="67*"/>
-			<ColumnDefinition Width="67*"/>
-			<ColumnDefinition Width="67*"/>
-			<ColumnDefinition Width="67*"/>
-			<ColumnDefinition Width="67*"/>
-		</Grid.ColumnDefinitions>
-		<Button Grid.Row="0" Grid.Column="0" Foreground="Cyan" FontSize="45" Background="Black" BorderBrush="Black" Grid.ColumnSpan="2">=</Button>
-		<Label Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="5" FontSize="45" Foreground="Cyan" Margin="92,-2,32,2">conjetura de collatz</Label>
-		<Button Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="3" Background="Black" Foreground="Cyan" BorderBrush="Cyan" FontSize="25" Margin="134,1,22,18" Click="Button_Click" BorderThickness="5">inicio</Button>
-		<lvc:CartesianChart   Name="C" Series="{Binding SeriesCollection}" Grid.Column="2" Grid.ColumnSpan="5" Margin="3,27,132,35" Grid.RowSpan="5" RenderTransformOrigin="0.5,0.5" Grid.Row="1" >
-			<lvc:CartesianChart.AxisX>
-				<lvc:Axis Title="x" Labels="{Binding BarLabels}" MaxValue="40" MinValue="1"></lvc:Axis>
-			</lvc:CartesianChart.AxisX>
-			<lvc:CartesianChart.AxisY>
-				<lvc:Axis Title="y" Labels="{Binding Formatter}"></lvc:Axis>
-			</lvc:CartesianChart.AxisY>
-		</lvc:CartesianChart>
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="64"/>
+            <RowDefinition Height="13"/>
+            <RowDefinition Height="77"/>
+            <RowDefinition Height="77"/>
+            <RowDefinition Height="77"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="66*"/>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="67*"/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="0" Grid.Column="0" Foreground="Cyan" FontSize="45" Background="Black" BorderBrush="Black" Grid.ColumnSpan="2" Margin="0,0,7,25">=</Button>
+        <Label Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="5" FontSize="45" Foreground="Cyan" Margin="92,25,32,27">conjetura de collatz</Label>
+        <Button Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="3" Background="Black" Foreground="Cyan" BorderBrush="Cyan" FontSize="25" Margin="134,1,22,18" Click="Button_Click" BorderThickness="5">inicio</Button>
+        <lvc:CartesianChart   Name="C" Series="{Binding SeriesCollection}" Grid.Column="1" Grid.ColumnSpan="6" Margin="20,98,19,35" Grid.RowSpan="6" RenderTransformOrigin="0.5,0.5" >
+            <lvc:CartesianChart.AxisX>
+                <lvc:Axis Title="x" Labels="{Binding BarLabels}" MaxValue="51" MinValue="1"></lvc:Axis>
+            </lvc:CartesianChart.AxisX>
+            <lvc:CartesianChart.AxisY>
+                <lvc:Axis Title="y" Labels="{Binding Formatter}"></lvc:Axis>
+            </lvc:CartesianChart.AxisY>
+        </lvc:CartesianChart>
 
 
-	</Grid>
+    </Grid>
 </Window>

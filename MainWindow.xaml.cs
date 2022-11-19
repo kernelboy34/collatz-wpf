@@ -45,8 +45,9 @@ namespace conjeturadecolltz
              new LineSeries
                 {
                     Title = "collatz numbers",
-                    Values = new ChartValues<double> {120,346,173,520,260,130,65,196,98,49,148,74,37,112,56,28,14,7,22,11,34,17,52,26,13,40,20,10,5,16,8,4,2,1},
+                    Values = new ChartValues<double> {346,173,520,260,130,65,196,98,49,148,74,37,112,56,28,14,7,22,11,34,17,52,26,13,40,20,10,5,16,8,4,2,1},
                     PointForeground=Brushes.Cyan,
+                    //secuencia de numeros en base a la conjetura de collatz numero 346
                    
                 },
             new LineSeries
@@ -62,6 +63,7 @@ namespace conjeturadecolltz
                 Values = new ChartValues<double> {1,2, 4, 78,5 },
                 PointGeometry = DefaultGeometries.Square,
                 PointGeometrySize = 15
+                //secuencia de numeros referencia
             },
                
                 };
@@ -70,7 +72,7 @@ namespace conjeturadecolltz
             SeriesCollection.Add(new LineSeries { Title = "comprobacion", Values = new ChartValues<double> { 442, 453, 444 }, LineSmoothness = 0, PointGeometry = Geometry.Parse("m.26 70 56555 94 38 -3 -7 -3"), PointForeground = Brushes.Red });
             SeriesCollection[3].Values.Add(5d);
             DataContext = this;
-
+            //nombres de los graficos brownianos
 
         }
 
@@ -80,49 +82,10 @@ namespace conjeturadecolltz
 
         public void Button_Click(object sender, RoutedEventArgs e)
         {
-            double[] numeros = { 120, 143, 115 };
-            double iterador = 2;
-
-            for (int i = 0; i < numeros.Length; i++)
-            {
-                double wi = numeros[1];
-
-                while ( wi != 1 && wi != 2 && wi!=4)
-                {
-               
-                    if (wi % 2 == 0)
-                    {
-                        wi= wi / iterador;
-                        StreamWriter sw = new StreamWriter("C:\\Users\\Usuario\\Downloads\\archivoos.txt");
-                        sw.Write(wi);
-                        sw.Close();
-                        string sd = Convert.ToString(wi);
-                        MessageBox.Show(sd);
-
-                    }
-
-                   if(wi % 2 == 1)
-                    {
-                        wi=( wi * 3 )+ 1;  
-                        StreamWriter sw = new StreamWriter("C:\\Users\\Usuario\\Downloads\\archivoss.txt");
-                        sw.Write(wi);
-                        sw.Close();
-                        string sd = Convert.ToString(wi);
-                        MessageBox.Show(sd);
-                    }
-                   if( wi == 1 ||wi == 4 ||wi == 2)
-                    {
-                        MessageBox.Show("bucle collatz");
-                        Close();
-                    } 
-                }
-                break;
-              
-
-            }
-
-
-
+            secuencia rito = new secuencia();
+            rito.collatz_sec(346);
+            //transferimos la parte matematica a la clase secuencia
         }
     }
 }
+//programa hecho por kernelboy34 o Bernardo Pedrazas
