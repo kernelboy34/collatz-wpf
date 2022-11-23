@@ -18,6 +18,7 @@ using LiveCharts.Wpf;
 using LiveCharts;
 using System.Security.Policy;
 using System.Reflection.Emit;
+using System.Windows.Controls.Ribbon;
 
 namespace conjeturadecolltz
 {
@@ -29,7 +30,7 @@ namespace conjeturadecolltz
 
     public partial class MainWindow : Window
     {
-
+       
         public MainWindow()
         {
 
@@ -41,6 +42,8 @@ namespace conjeturadecolltz
         }
         public void Cartesian()
         {
+  
+            double h = 122;
             SeriesCollection = new SeriesCollection {
              new LineSeries
                 {
@@ -52,22 +55,23 @@ namespace conjeturadecolltz
                 },
             new LineSeries
             {
-                Title = "columna",
+             
+                Title = "paramentros",
                 Values = new ChartValues<double> { 1, 56, 63, 78,4 },
                 PointGeometry = null
             },
 
             new LineSeries
             {
-                Title = "na",
-                Values = new ChartValues<double> {1,2, 4, 78,5 },
+                Title = "tema",
+                Values = new ChartValues<double> {23,2,4,h,6,7},
                 PointGeometry = DefaultGeometries.Square,
                 PointGeometrySize = 15
                 //secuencia de numeros referencia
             },
                
                 };
-            Labels = new[] { "tablas", "char", "jaja" };
+            Labels = new[] { "tablas", "char", "valores" };
             yFormatter = value => value.ToString("c");
             SeriesCollection.Add(new LineSeries { Title = "comprobacion", Values = new ChartValues<double> { 442, 453, 444 }, LineSmoothness = 0, PointGeometry = Geometry.Parse("m.26 70 56555 94 38 -3 -7 -3"), PointForeground = Brushes.Red });
             SeriesCollection[3].Values.Add(5d);
@@ -82,9 +86,21 @@ namespace conjeturadecolltz
 
         public void Button_Click(object sender, RoutedEventArgs e)
         {
+            Random rnd= new Random();
+            double j=Convert.ToDouble(rnd.Next(0, 100));
             secuencia rito = new secuencia();
             rito.collatz_sec(346);
+            escritura lito=new escritura();
+            lito.es();
+            rito.derivadas(346);
+            lito.derivadas(346);
             //transferimos la parte matematica a la clase secuencia
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Page1 pagina = new Page1();
         }
     }
 }

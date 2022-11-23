@@ -28,8 +28,8 @@
             <ColumnDefinition Width="67*"/>
             <ColumnDefinition Width="67*"/>
         </Grid.ColumnDefinitions>
-        <Button Grid.Row="0" Grid.Column="0" Foreground="Cyan" FontSize="45" Background="Black" BorderBrush="Black" Grid.ColumnSpan="2" Margin="0,0,7,25">=</Button>
-        <Label Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="5" FontSize="45" Foreground="Cyan" Margin="92,25,32,27">conjetura de collatz</Label>
+        <Button Grid.Row="0" Grid.Column="0" Foreground="Cyan" FontSize="45" Background="Black" BorderBrush="Black" Grid.ColumnSpan="2" Margin="0,0,7,25" Click="Button_Click_1">=</Button>
+        <Label Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="5" FontSize="45" Foreground="Cyan" Margin="53,7,71,52">conjetura de collatz</Label>
         <Button Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="3" Background="Black" Foreground="Cyan" BorderBrush="Cyan" FontSize="25" Margin="134,1,22,18" Click="Button_Click" BorderThickness="5">inicio</Button>
         <lvc:CartesianChart   Name="C" Series="{Binding SeriesCollection}" Grid.Column="1" Grid.ColumnSpan="6" Margin="20,98,19,35" Grid.RowSpan="6" RenderTransformOrigin="0.5,0.5" >
             <lvc:CartesianChart.AxisX>

@@ -9,9 +9,10 @@ using System.Windows;
 
 namespace conjeturadecolltz
 {
-    internal class secuencia
+    public class secuencia
     {
         public double sec { get; set; }
+        public double deri { get; set; }
         //definimos la variable de recepcion
         public void collatz_sec(double numeros)
         {
@@ -61,5 +62,18 @@ namespace conjeturadecolltz
 
 
         }
+        public virtual double derivadas(double d)
+        {
+            this.deri = d;
+            double r = (d * d) + (2 * d) + 1* sec;
+            string s = r.ToString();
+            MessageBox.Show(s+" de rivada parcial punto predecible mas alto");
+            double j = (d / d) - (d - 2) * 3/sec;
+            string s2 = j.ToString();
+            MessageBox.Show("punto mas bajo predecile" + s2);
+            return d;
+        }
+
+      
     }
 }
