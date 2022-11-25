@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using conjeturadecolltz;
+using System.Windows.Controls;
 //aplicamos derivadas y frecuencias y usamos a secuencia como herencia
 namespace conjeturadecolltz
 {
@@ -43,6 +45,7 @@ namespace conjeturadecolltz
            
             return predice;   
         }
+       
     }
    
 }

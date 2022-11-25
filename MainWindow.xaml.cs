@@ -15,11 +15,12 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using LiveCharts.Wpf;
+using conjeturadecolltz;
 using LiveCharts;
 using System.Security.Policy;
 using System.Reflection.Emit;
 using System.Windows.Controls.Ribbon;
-
+using conjeturadecolltz.Pages;
 namespace conjeturadecolltz
 {
     /// <summary>
@@ -30,13 +31,14 @@ namespace conjeturadecolltz
 
     public partial class MainWindow : Window
     {
-       
+        Pg r =new Pg();
         public MainWindow()
         {
 
             InitializeComponent();
             this.DataContext = this;
             this.Cartesian();
+            a.NavigationService.Navigate(r);
 
 
         }
@@ -100,7 +102,8 @@ namespace conjeturadecolltz
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Page1 pagina = new Page1();
+
+            a.NavigationService.Navigate(r);
         }
     }
 }
