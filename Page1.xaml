@@ -8,18 +8,26 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Pagina">
 
-    <Grid Background="Black">
+     <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Usuario\source\repos\logincollt\logincollt\ima\pa.jpg"></ImageBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="77"/>
-            <RowDefinition Height="77"/>
-            <RowDefinition Height="64"/>
+            <RowDefinition Height="72"/>
+            <RowDefinition Height="272"/>
+            <RowDefinition Height="12"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="66"/>
-            <ColumnDefinition Width="67*"/>
-            <ColumnDefinition Width="67"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="600"/>
         </Grid.ColumnDefinitions>
-        <Label Grid.Row="0" Grid.Column="1" FontSize="45" Foreground="Cyan" Margin="142,3,19,1">conjetura de collatz</Label>
-        <TextBox Grid.Row="2" Grid.Column="1" FontSize="43" Background="Black" Foreground="Cyan" Margin="132,15,183,-36" BorderBrush="Black" TextChanged="TextBox_TextChanged">holi</TextBox>
+        <Label Background="Black" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" FontSize="45" Foreground="Cyan" Margin="223,-4,243,1" RenderTransformOrigin="0.5,0.5"  >login</Label>
+
+        <TextBox Background="Black" FontStyle="Italic" Foreground="cyan" FontSize="23" BorderBrush="Cyan" BorderThickness="3"  RenderTransformOrigin="0.5,0.5" Grid.Column="1" Margin="240,30,165,197" Grid.Row="1" x:Name="ra"/>
+        <Label Background="Black" FontSize="23" Foreground="cyan" Width="92" Content="cuenta: " Grid.Column="1" Margin="131,33,377,196" Grid.Row="1"/>
+        <Label Background="Black" FontSize="23" Foreground="Cyan" RenderTransformOrigin="0.477,0.473" Grid.Column="1" Margin="103,84,382,144" Grid.Row="1" Content="Password:"/>
+        <TextBox Background="Black" FontStyle="Italic" Foreground="cyan" FontSize="23" BorderBrush="Cyan" BorderThickness="3"  RenderTransformOrigin="0.706,0.699" Grid.Column="1" Margin="240,90,165,137" Grid.Row="1" x:Name="juan"/>
+        <Button   Background="Black" Foreground="Cyan" BorderBrush="Cyan" BorderThickness="4" Grid.Column="1" Margin="144,254,189,-33" Grid.Row="1" RenderTransformOrigin="0.512,0.46" Grid.RowSpan="2" FontSize="45" Click="Button_Click">entrar</Button>
+
     </Grid>
 </Page>
