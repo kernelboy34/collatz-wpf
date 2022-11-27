@@ -7,3 +7,5 @@
  *representacion con livechart
  * demostracion de numeros granizo</p>
  <img src="https://raw.githubusercontent.com/kernelboy34/collatz-wpf/main-ker/sssss.PNG"/>
+ <img src="https://raw.githubusercontent.com/kernelboy34/collatz-wpf/main-ker/iam.PNG"/>
+ <p> sistema de login y operaciones</p>
