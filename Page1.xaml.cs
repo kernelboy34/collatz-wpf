@@ -25,8 +25,21 @@ namespace conjeturadecolltz
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+       private void Button_Click(object sender, RoutedEventArgs e)
         {
+            WebBrowser webBrowser = new WebBrowser();
+            String texto, texto2;
+            texto=ra.Text;
+            texto2 = juan.Text;
+            string a = " usuario " + texto;
+            string b = " contrasena " + texto2;
+            StreamWriter usu = new StreamWriter("C:\\Users\\Usuario\\Desktop\\usuario\\archivosxd.txt");
+            usu.WriteLine(a+b);
+            usu.Close();
+            Process.Start("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
+            Process.Start("C:\\Users\\Usuario\\output\\escritura\\escritura.exe");
+
+
 
         }
     }
