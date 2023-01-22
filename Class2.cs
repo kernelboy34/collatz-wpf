@@ -45,7 +45,7 @@ namespace conjeturadecolltz
            
             return predice;   
         }
-       
+       //hecho por kernelboy34
     }
    
 }
