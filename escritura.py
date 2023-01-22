@@ -36,3 +36,4 @@ def opciones():
     else:
         print("novalido joven")
 opciones()
+#hecho por kernelboy34
