@@ -74,6 +74,6 @@ namespace conjeturadecolltz
             return d;
         }
 
-      
+      //hecho por kernelboy34
     }
 }
